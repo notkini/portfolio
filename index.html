@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aditya Kinikar | Data Engineering Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Aditya Kinikar, aspiring data engineer from Navi Mumbai, currently studying at SIES Graduate School of Technology."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-mark">
+        <div class="logo-circle"></div>
+        <span class="logo-text">Aditya Kinikar</span>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero + About section -->
+      <section class="hero-grid" id="about">
+        <div class="hero-main">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span>Open to data engineering roles and internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Aspiring <span>Data Engineer</span> from Navi Mumbai
+          </h1>
+
+          <p class="hero-subtitle">
+            I am Aditya Kinikar, currently studying at SIES Graduate School of
+            Technology. I am focused on building reliable data pipelines and
+            data infrastructure using Python, SQL, and modern data engineering
+            tools.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-chip">Navi Mumbai, India</span>
+            <span class="meta-chip">SIES Graduate School of Technology</span>
+            <span class="meta-chip">Actively building portfolio projects</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View planned projects</a>
+            <button type="button" class="btn-ghost" id="openContactModal">
+              Get in touch
+            </button>
+          </div>
+        </div>
+
+        <aside class="about-card">
+          <div>
+            <p class="section-label">About</p>
+            <h2 class="about-heading">Data engineering focus</h2>
+            <p class="about-text">
+              I am interested in designing efficient data workflows, building
+              scalable pipelines, and working with real world datasets to support
+              analytics and decision making. I am currently learning core
+              concepts and tools in data engineering and applying them to
+              hands on projects.
+            </p>
+          </div>
+
+          <div>
+            <p class="section-label">Currently learning</p>
+            <ul class="about-list">
+              <li>Python and SQL for data processing</li>
+              <li>ETL pipelines and data modeling</li>
+              <li>Tools such as Airflow, Spark, and Kafka</li>
+              <li>Cloud fundamentals for data platforms</li>
+            </ul>
+          </div>
+
+          <p class="about-footer-note">
+            This portfolio is a work in progress. Projects will be added as I
+            complete them over the next few weeks.
+          </p>
+        </aside>
+      </section>
+
+      <!-- Skills placeholder for now -->
+<section id="skills" class="skills-section">
+  <div class="section-header">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">Skills I work with</h2>
+    <p class="section-description">
+      I focus on data engineering and backend foundations. Below are the core areas I use and keep improving.
+      The progress bars reflect how much of each checklist I have currently completed on my side.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+    <!-- Core programming -->
+    <article class="skill-card" data-skill-id="core-programming">
+      <div class="skill-card-top">
+        <h3>Core programming - Python</h3>
+        <p class="skill-meta">Foundation</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="core-programming" />
+            Python syntax, data types, control flow
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="core-programming" />
+            Functions, modules and packages
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="core-programming" />
+            Object oriented programming (classes, inheritance)
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="core-programming" />
+            Working with files, JSON, CSV and external APIs
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Focused on writing clean, reliable Python code for data pipelines and backend services.
+      </p>
+    </article>
+
+    <!-- Databases and SQL -->
+    <article class="skill-card" data-skill-id="databases-sql">
+      <div class="skill-card-top">
+        <h3>Databases and SQL</h3>
+        <p class="skill-meta">Foundation</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="databases-sql" />
+            Relational concepts, primary keys and foreign keys
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="databases-sql" />
+            PostgreSQL basics and schema design
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="databases-sql" />
+            SELECT queries with WHERE, ORDER BY, LIMIT
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="databases-sql" />
+            JOIN, GROUP BY, aggregates and simple indexing
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Comfortable working with SQL to query, model and optimize data for analytics and services.
+      </p>
+    </article>
+
+    <!-- Data engineering foundations -->
+    <article class="skill-card" data-skill-id="de-foundations">
+      <div class="skill-card-top">
+        <h3>Data engineering foundations</h3>
+        <p class="skill-meta">Data focus</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="de-foundations" />
+            ETL and ELT concepts and patterns
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="de-foundations" />
+            Batch vs streaming pipelines and use cases
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="de-foundations" />
+            Data modeling for analytics, star schema ideas
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="de-foundations" />
+            Basic data quality checks and validation
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Focused on understanding how data moves from source systems to dashboards and models.
+      </p>
+    </article>
+
+    <!-- Tools and frameworks -->
+    <article class="skill-card" data-skill-id="tools-frameworks">
+      <div class="skill-card-top">
+        <h3>Tools and frameworks</h3>
+        <p class="skill-meta">Data stack</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="tools-frameworks" />
+            Apache Airflow for workflow orchestration
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="tools-frameworks" />
+            Apache Spark for distributed data processing
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="tools-frameworks" />
+            Kafka basics for streaming pipelines
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="tools-frameworks" />
+            Pandas for local data exploration and cleaning
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Moving from local scripts to production style, orchestrated data workflows.
+      </p>
+    </article>
+
+    <!-- Backend and APIs -->
+    <article class="skill-card" data-skill-id="backend-apis">
+      <div class="skill-card-top">
+        <h3>Backend and APIs</h3>
+        <p class="skill-meta">Supportive</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="backend-apis" />
+            HTTP, REST and JSON based APIs
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="backend-apis" />
+            FastAPI for simple CRUD services
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="backend-apis" />
+            Connecting APIs to PostgreSQL with an ORM
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="backend-apis" />
+            Basic authentication such as JWT based flows
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Able to expose data and pipeline results through small, focused services.
+      </p>
+    </article>
+
+    <!-- Cloud and dev basics -->
+    <article class="skill-card" data-skill-id="cloud-dev">
+      <div class="skill-card-top">
+        <h3>Cloud and dev basics</h3>
+        <p class="skill-meta">Supportive</p>
+        <div class="skill-progress">
+          <div class="skill-progress-fill"></div>
+        </div>
+        <div class="skill-progress-label">0% complete</div>
+      </div>
+      <ul class="skill-checklist">
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="cloud-dev" />
+            Linux command line and basic shell scripting
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="cloud-dev" />
+            Git and GitHub for version control and collaboration
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="cloud-dev" />
+            AWS basics like S3 and simple compute
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" class="skill-checkbox" data-skill-id="cloud-dev" />
+            Introduction to containers with Docker
+          </label>
+        </li>
+      </ul>
+      <p class="skill-note">
+        Building comfort with the environment where data systems actually run.
+      </p>
+    </article>
+  </div>
+</section>
+
+
+
+      <!-- Projects placeholder -->
+      <section id="projects" class="placeholder-section">
+        Projects section coming soon. Planned projects include a backend API,
+        an ETL pipeline using Airflow and Spark, and a streaming pipeline using Kafka.
+      </section>
+
+      <!-- Contact placeholder (actual contact happens via modal) -->
+      <section id="contact" class="placeholder-section">
+        Use the "Get in touch" button above to send me a message directly.
+        This section will later include links to my email, LinkedIn, and GitHub.
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Aditya Kinikar. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Contact modal -->
+  <div id="contactModal" class="modal-bg">
+    <div class="modal-card">
+      <h3>Send a message</h3>
+      <p class="modal-subtitle">
+        Your message will be sent to my inbox through a secure form.
+      </p>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/xkgelwee"
+        method="POST"
+      >
+        <label for="name">Full Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="_replyto"
+          placeholder="you@example.com"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Write your message here"
+          required
+        ></textarea>
+
+        <!-- Optional hidden field for subject -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New message from your portfolio site"
+        />
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Send message</button>
+          <button type="button" class="btn-ghost" id="closeContactModal">
+            Cancel
+          </button>
+        </div>
+
+        <p class="modal-note">
+          You will receive a copy of the conversation in your email.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
