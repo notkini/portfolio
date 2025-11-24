@@ -7,89 +7,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Contact modal logic
   var modal = document.getElementById("contactModal");
-  var openBtn = document.getElementById("openContactModal");
+  var openBtnMain = document.getElementById("openContactModal");
+  var openBtnSecondary = document.getElementById("openContactModalSecondary");
   var closeBtn = document.getElementById("closeContactModal");
 
-  if (openBtn && modal) {
-    openBtn.addEventListener("click", function () {
+  function openModal() {
+    if (modal) {
       modal.classList.add("active");
-    });
+    }
   }
 
-  if (closeBtn && modal) {
-    closeBtn.addEventListener("click", function () {
+  function closeModal() {
+    if (modal) {
       modal.classList.remove("active");
-    });
+    }
+  }
+
+  if (openBtnMain) {
+    openBtnMain.addEventListener("click", openModal);
+  }
+
+  if (openBtnSecondary) {
+    openBtnSecondary.addEventListener("click", openModal);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
   }
 
   if (modal) {
     // Close when clicking outside the card
     modal.addEventListener("click", function (e) {
       if (e.target === modal) {
-        modal.classList.remove("active");
+        closeModal();
       }
     });
   }
 
-  // Skills progress logic
-  initSkillProgress();
+  // Skills progress logic (read only, based on HTML)
+  initSkillProgressReadOnly();
 });
 
-function initSkillProgress() {
+function initSkillProgressReadOnly() {
   var skillCards = document.querySelectorAll(".skill-card");
   if (!skillCards.length) return;
 
   skillCards.forEach(function (card) {
-    var skillId = card.getAttribute("data-skill-id");
-    if (!skillId) return;
-
     var checkboxes = card.querySelectorAll(".skill-checkbox");
     var fill = card.querySelector(".skill-progress-fill");
     var label = card.querySelector(".skill-progress-label");
 
     if (!checkboxes.length || !fill || !label) return;
 
-    // Restore saved state from localStorage
-    var saved = localStorage.getItem("skill_" + skillId);
-    if (saved) {
-      try {
-        var checkedIndexes = JSON.parse(saved);
-        checkboxes.forEach(function (cb, index) {
-          cb.checked = checkedIndexes.indexOf(index) !== -1;
-        });
-      } catch (err) {
-        console.warn("Could not parse saved skill state for", skillId);
-      }
-    }
-
-    // Initial progress update
-    updateCardProgress(checkboxes, fill, label);
-
-    // Set listeners
-    checkboxes.forEach(function (cb, index) {
-      cb.addEventListener("change", function () {
-        saveSkillState(skillId, checkboxes);
-        updateCardProgress(checkboxes, fill, label);
-      });
-    });
+    updateCardProgressReadOnly(checkboxes, fill, label);
   });
 }
 
-function saveSkillState(skillId, checkboxes) {
-  var checkedIndexes = [];
-  checkboxes.forEach(function (cb, index) {
-    if (cb.checked) {
-      checkedIndexes.push(index);
-    }
-  });
-  try {
-    localStorage.setItem("skill_" + skillId, JSON.stringify(checkedIndexes));
-  } catch (err) {
-    console.warn("Could not save skill state for", skillId);
-  }
-}
-
-function updateCardProgress(checkboxes, fill, label) {
+function updateCardProgressReadOnly(checkboxes, fill, label) {
   var total = checkboxes.length;
   var checked = 0;
   checkboxes.forEach(function (cb) {
